@@ -2,7 +2,7 @@
 title = 'KINGs Blog'
 baseURL = "https://www.kanthi.in/"
 languageCode = "en-us"
-theme = "re-terminal-v1"
+theme = "re-terminal"
 pagination.pagerSize = 5
 
 
