@@ -1,8 +1,8 @@
 
-title = 'KINGsBlog'
+title = 'KINGs Blog'
 baseURL = "https://www.kanthi.in/"
 languageCode = "en-us"
-theme = "re-terminal"
+theme = "re-terminal-v1"
 pagination.pagerSize = 5
 
 
@@ -12,6 +12,7 @@ pagination.pagerSize = 5
 contentTypeName = "posts"
 
 themeColor = "green"
+#themeColor = "paper"
 
 # if you set this to 0, only submenu trigger will be visible
 showMenuItems = 2
@@ -20,7 +21,7 @@ showMenuItems = 2
 showLanguageSelector = false
 
 # set theme to full screen width
-fullWidthTheme = true
+fullWidthTheme = false
 
 # center theme with default width
 centerTheme = true
@@ -34,10 +35,10 @@ autoCover = true
 
 # set post to show the last updated
 # If you use git, you can set `enableGitInfo` to `true` and then post will automatically get the last updated
-showLastUpdated = false
+showLastUpdated = true
 
 # Provide a string as a prefix for the last update date. By default, it looks like this: 2020-xx-xx [Updated: 2020-xx-xx] :: Author
-# updatedDatePrefix = "Updated"
+updatedDatePrefix = "Updated"
 
 # whether to show a page's estimated reading time
 # readingTime = false # default
@@ -75,7 +76,7 @@ site = ""
 [languages]
 [languages.en]
 languageName = "English"
-title = "Terminal"
+title = "KINGsBlog"
 
 [languages.en.params]
 subtitle = "KINGs Notes"
@@ -101,7 +102,7 @@ logoHomeLink = "/"
 identifier = "about"
 name = "About"
 url = "/about"
-#[[languages.en.menu.main]]
-#identifier = "showcase"
-#name = "Showcase"
-#url = "/showcase"
+[[languages.en.menu.main]]
+identifier = "showcase"
+name = "Books"
+url = "http://kanthi.in/books"

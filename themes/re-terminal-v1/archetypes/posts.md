@@ -1,15 +1,15 @@
 +++
-title = "Hello World !!! "
-date = "2016-12-18T15:47:36+05:30"
+title = "{{ replace .TranslationBaseName "-" " " | title }}"
+date = "{{ .Date }}"
 author = ""
 authorTwitter = "" #do not include @
 cover = ""
+coverCaption = ""
 tags = ["", ""]
 keywords = ["", ""]
 description = ""
 showFullContent = false
 readingTime = false
 hideComments = false
+color = "" #color from the theme settings
 +++
-
-Hello World !!!!!!!
