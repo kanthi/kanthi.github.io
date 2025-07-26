@@ -1,7 +1,7 @@
 ---
 title: "Nix and NixOS: A Comprehensive Guide for 2025"
 date: 2025-07-21T09:02:28+05:30
-draft: false
+draft: true
 tags: ["nixos", "nix", "package-manager", "linux", "devops", "reproducible-builds", "flakes"]
 categories: ["Development Tools", "Linux", "System Administration"]
 ---

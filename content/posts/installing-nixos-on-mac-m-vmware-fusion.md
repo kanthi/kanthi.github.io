@@ -1,7 +1,7 @@
 ---
 title: "Installing NixOS on Apple Silicon Macs with VMware Fusion"
 date: 2025-07-21T10:15:00+05:30
-draft: false
+draft: true
 tags: ["nixos", "vmware-fusion", "virtualization", "apple-silicon", "m3", "arm64", "flakes"]
 categories: ["NixOS", "Virtualization", "macOS"]
 ---
