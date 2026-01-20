@@ -104,5 +104,5 @@ name = "About"
 url = "/about"
 [[languages.en.menu.main]]
 identifier = "showcase"
-name = "Books"
+name = "myNotes"
 url = "http://kanthi.in/books"
