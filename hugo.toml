@@ -6,6 +6,12 @@ theme = "re-terminal"
 pagination.pagerSize = 5
 
 
+# Google Analytics 4 — blog stream (kanthi.in)
+# Theme already loads Hugo's built-in GA partial when ID is set.
+[services.googleAnalytics]
+ID = "G-VQZ2781CYW"
+
+
 [params]
 # dir name of your main content (default is `content/posts`).
 # the list of set content will show up on your index page (baseurl).
