@@ -15,7 +15,7 @@ themeColor = "green"
 #themeColor = "paper"
 
 # if you set this to 0, only submenu trigger will be visible
-showMenuItems = 2
+showMenuItems = 3
 
 # show selector to switch language
 showLanguageSelector = false
@@ -106,5 +106,7 @@ url = "/about"
 identifier = "showcase"
 name = "myNotes"
 url = "http://kanthi.in/books"
+[[languages.en.menu.main]]
+identifier = "byol"
 name = "BYOL"
 url = "https://www.kanthi.in/byol/"
