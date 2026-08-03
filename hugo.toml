@@ -7,9 +7,13 @@ pagination.pagerSize = 5
 
 
 # Google Analytics 4 — blog stream (kanthi.in)
-# Theme already loads Hugo's built-in GA partial when ID is set.
+# ID is read by layouts/partials/extended_head.html (same gtag pattern as BYOL).
+# Built-in theme partial is disabled below so we do not double-load gtag.
 [services.googleAnalytics]
 ID = "G-VQZ2781CYW"
+
+[privacy.googleAnalytics]
+disable = true
 
 
 [params]

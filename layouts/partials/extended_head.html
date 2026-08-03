@@ -1,0 +1,20 @@
+{{- /* Explicit GA4 gtag (same pattern as BYOL). Hugo built-in is disabled via privacy.googleAnalytics.disable. */ -}}
+{{- with site.Config.Services.GoogleAnalytics.ID }}
+<!-- Google Analytics 4 — blog stream (kanthi.in) -->
+<script>
+  window.GA_MEASUREMENT_ID = '{{ . }}';
+  if (window.GA_MEASUREMENT_ID) {
+    var s = document.createElement('script');
+    s.async = true;
+    s.src = 'https://www.googletagmanager.com/gtag/js?id=' + window.GA_MEASUREMENT_ID;
+    document.head.appendChild(s);
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', window.GA_MEASUREMENT_ID, {
+      cookie_domain: 'kanthi.in',
+      send_page_view: true
+    });
+  }
+</script>
+{{- end }}
