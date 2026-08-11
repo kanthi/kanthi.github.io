@@ -1,7 +1,8 @@
 
 title = 'KINGs Blog'
 baseURL = "https://www.kanthi.in/"
-languageCode = "en-us"
+defaultContentLanguage = "en"
+# locale is set per-language below
 theme = "re-terminal"
 pagination.pagerSize = 5
 
@@ -15,6 +16,11 @@ ID = "G-VQZ2781CYW"
 [privacy.googleAnalytics]
 disable = true
 
+
+# RSS / attribution (replaces removed .Site.Author in Hugo 0.158+)
+[params.author]
+name = "KING"
+email = ""
 
 [params]
 # dir name of your main content (default is `content/posts`).
@@ -85,7 +91,8 @@ site = ""
 
 [languages]
 [languages.en]
-languageName = "English"
+label = "English"
+locale = "en-us"
 title = "KINGsBlog"
 
 [languages.en.params]
