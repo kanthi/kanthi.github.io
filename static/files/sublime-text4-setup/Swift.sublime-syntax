@@ -1,0 +1,106 @@
+%YAML 1.2
+---
+# http://www.sublimetext.com/docs/syntax.html
+name: Swift
+file_extensions:
+  - swift
+scope: source.swift
+version: 2
+
+contexts:
+  main:
+    - include: comments
+    - include: attributes
+    - include: keywords
+    - include: literals
+    - include: types
+    - include: operators
+    - include: strings
+
+  comments:
+    - match: /\*
+      scope: punctuation.definition.comment.begin.swift
+      push:
+        - meta_scope: comment.block.swift
+        - match: \*/
+          scope: punctuation.definition.comment.end.swift
+          pop: true
+        - match: /\*
+          push:
+            - match: \*/
+              pop: true
+    - match: //
+      scope: punctuation.definition.comment.swift
+      push:
+        - meta_scope: comment.line.double-slash.swift
+        - match: $
+          pop: true
+
+  attributes:
+    - match: '@[A-Za-z_][\w]*'
+      scope: storage.modifier.attribute.swift
+
+  keywords:
+    - match: \b(import|let|var|func|return|if|else|guard|switch|case|default|for|in|while|repeat|break|continue|fallthrough|defer|do|catch|throw|throws|rethrows|try|as|is|where|associatedtype|typealias|protocol|extension|struct|class|enum|actor|init|deinit|subscript|static|lazy|weak|unowned|optional|required|convenience|override|final|open|public|internal|fileprivate|private|indirect|mutating|nonmutating|consuming|borrowing|async|await|some|any|inout|get|set|willSet|didSet|operator|precedencegroup|infix|prefix|postfix|associativity|left|right|none|higherThan|lowerThan)\b
+      scope: keyword.control.swift
+    - match: \b(true|false|nil|self|Self|super|#file|#fileID|#filePath|#line|#column|#function|#selector|#keyPath|#available|#unavailable)\b
+      scope: constant.language.swift
+    - match: \b(print|fatalError|precondition|assert|dump)\b
+      scope: support.function.swift
+
+  types:
+    - match: \b(Int|Int8|Int16|Int32|Int64|UInt|UInt8|UInt16|UInt32|UInt64|Float|Double|Bool|String|Character|Array|Dictionary|Set|Optional|Result|Error|Any|AnyObject|Void|Never|CGFloat|Data|URL|Range|ClosedRange)\b
+      scope: storage.type.swift
+    - match: \b[A-Z][A-Za-z0-9_]*\b
+      scope: entity.name.type.swift
+
+  literals:
+    - match: \b(0x[\da-fA-F][\da-fA-F_]*|0b[01][01_]*|0o[0-7][0-7_]*|\d[\d_]*(\.[\d_]+)?([eE][+-]?\d[\d_]*)?)\b
+      scope: constant.numeric.swift
+
+  operators:
+    - match: '->|=>|\.\.\<|\.\.\.|===|!==|==|!=|<=|>=|&&|\|\||[+\-*/%&|^~<>!=?]='
+      scope: keyword.operator.swift
+    - match: '[+\-*/%&|^~<>!?]'
+      scope: keyword.operator.swift
+
+  strings:
+    - match: '"""'
+      scope: punctuation.definition.string.begin.swift
+      push:
+        - meta_scope: string.quoted.triple.swift
+        - match: '"""'
+          scope: punctuation.definition.string.end.swift
+          pop: true
+        - match: \\\(
+          scope: punctuation.section.embedded.begin.swift
+          push:
+            - clear_scopes: 1
+            - meta_scope: meta.embedded.line.swift
+            - match: \)
+              scope: punctuation.section.embedded.end.swift
+              pop: true
+            - include: main
+        - match: \\.
+          scope: constant.character.escape.swift
+    - match: '"'
+      scope: punctuation.definition.string.begin.swift
+      push:
+        - meta_scope: string.quoted.double.swift
+        - match: '"'
+          scope: punctuation.definition.string.end.swift
+          pop: true
+        - match: \\\(
+          scope: punctuation.section.embedded.begin.swift
+          push:
+            - clear_scopes: 1
+            - meta_scope: meta.embedded.line.swift
+            - match: \)
+              scope: punctuation.section.embedded.end.swift
+              pop: true
+            - include: main
+        - match: \\.
+          scope: constant.character.escape.swift
+        - match: \n
+          scope: invalid.illegal.newline.swift
+          pop: true

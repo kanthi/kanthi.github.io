@@ -1,0 +1,14 @@
+{
+	"settings":
+	{
+		"python.pythonPath": "HOME_DIR/.local/share/mise/installs/python/latest/bin/python3",
+		"python.analysis.typeCheckingMode": "basic",
+		"python.analysis.autoImportCompletions": true,
+		"python.analysis.diagnosticMode": "openFilesOnly",
+		"pyright.disableLanguageServices": false
+	},
+	"env":
+	{
+		"PATH": "HOME_DIR/.local/share/mise/installs/go/latest/bin:HOME_DIR/.local/share/mise/installs/python/latest/bin:HOME_DIR/.local/share/mise/installs/bun/latest/bin:HOME_DIR/.local/bin:HOME_DIR/Workspace/GoDev/bin:/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
+	}
+}

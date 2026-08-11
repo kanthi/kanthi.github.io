@@ -1,0 +1,191 @@
+[
+	// Go: ⌘B = go run
+	{
+		"keys": ["super+b"],
+		"command": "build",
+		"args": { "build_system": "Packages/User/Go.sublime-build" },
+		"context":
+		[
+			{ "key": "selector", "operator": "equal", "operand": "source.go" }
+		]
+	},
+	{
+		"keys": ["super+shift+b"],
+		"command": "build",
+		"args": { "build_system": "Packages/User/Go.sublime-build", "select": true },
+		"context":
+		[
+			{ "key": "selector", "operator": "equal", "operand": "source.go" }
+		]
+	},
+	// Python: ⌘B = python -u $file
+	{
+		"keys": ["super+b"],
+		"command": "build",
+		"args": { "build_system": "Packages/User/Python.sublime-build" },
+		"context":
+		[
+			{ "key": "selector", "operator": "equal", "operand": "source.python" }
+		]
+	},
+	{
+		"keys": ["super+shift+b"],
+		"command": "build",
+		"args": { "build_system": "Packages/User/Python.sublime-build", "select": true },
+		"context":
+		[
+			{ "key": "selector", "operator": "equal", "operand": "source.python" }
+		]
+	},
+	// JavaScript: ⌘B = node $file
+	{
+		"keys": ["super+b"],
+		"command": "build",
+		"args": { "build_system": "Packages/User/JavaScript.sublime-build" },
+		"context":
+		[
+			{ "key": "selector", "operator": "equal", "operand": "source.js" }
+		]
+	},
+	{
+		"keys": ["super+shift+b"],
+		"command": "build",
+		"args": { "build_system": "Packages/User/JavaScript.sublime-build", "select": true },
+		"context":
+		[
+			{ "key": "selector", "operator": "equal", "operand": "source.js" }
+		]
+	},
+	// TypeScript / TSX: ⌘B = bun run $file
+	{
+		"keys": ["super+b"],
+		"command": "build",
+		"args": { "build_system": "Packages/User/TypeScript.sublime-build" },
+		"context":
+		[
+			{ "key": "selector", "operator": "equal", "operand": "source.ts | source.tsx" }
+		]
+	},
+	{
+		"keys": ["super+shift+b"],
+		"command": "build",
+		"args": { "build_system": "Packages/User/TypeScript.sublime-build", "select": true },
+		"context":
+		[
+			{ "key": "selector", "operator": "equal", "operand": "source.ts | source.tsx" }
+		]
+	},
+	// Odin: ⌘B = odin run $file -file
+	{
+		"keys": ["super+b"],
+		"command": "build",
+		"args": { "build_system": "Packages/User/Odin Run.sublime-build" },
+		"context":
+		[
+			{ "key": "selector", "operator": "equal", "operand": "source.odin" }
+		]
+	},
+	{
+		"keys": ["super+b"],
+		"command": "build",
+		"args": { "build_system": "Packages/User/Odin Run.sublime-build" },
+		"context":
+		[
+			{ "key": "filename", "operator": "regex_match", "operand": ".*\\.odin$" }
+		]
+	},
+	{
+		"keys": ["super+shift+b"],
+		"command": "build",
+		"args": { "build_system": "Packages/User/Odin Run.sublime-build", "select": true },
+		"context":
+		[
+			{ "key": "selector", "operator": "equal", "operand": "source.odin" }
+		]
+	},
+	{
+		"keys": ["super+shift+b"],
+		"command": "build",
+		"args": { "build_system": "Packages/User/Odin Run.sublime-build", "select": true },
+		"context":
+		[
+			{ "key": "filename", "operator": "regex_match", "operand": ".*\\.odin$" }
+		]
+	},
+
+	// ========== Terminal (Terminus) ==========
+	// Toggle bottom terminal panel (VS Code / iTerm style)
+	{
+		"keys": ["ctrl+`"],
+		"command": "toggle_terminus_panel",
+		"args":
+		{
+			"cwd": "${file_path:${folder}}"
+		}
+	},
+	// Also ⌘J like some editors
+	{
+		"keys": ["super+j"],
+		"command": "toggle_terminus_panel",
+		"args":
+		{
+			"cwd": "${file_path:${folder}}"
+		}
+	},
+	// New terminal panel in current file / project folder
+	{
+		"keys": ["ctrl+shift+`"],
+		"command": "terminus_open",
+		"args":
+		{
+			"config_name": "Zsh",
+			"cwd": "${file_path:${folder}}",
+			"panel_name": "Terminal",
+			"force_kill": false
+		}
+	},
+	// Terminal as a full tab (not panel)
+	{
+		"keys": ["ctrl+alt+t"],
+		"command": "terminus_open",
+		"args":
+		{
+			"config_name": "Zsh",
+			"cwd": "${file_path:${folder}}",
+			"title": "Terminal"
+		}
+	},
+	// Terminal in project root only
+	{
+		"keys": ["ctrl+alt+shift+t"],
+		"command": "terminus_open",
+		"args":
+		{
+			"config_name": "Zsh",
+			"cwd": "${folder:${file_path}}",
+			"panel_name": "Terminal",
+			"title": "Project"
+		}
+	},
+
+	// Format document (LSP)
+	{
+		"keys": ["super+shift+i"],
+		"command": "lsp_format_document"
+	},
+	// Rename symbol (LSP)
+	{
+		"keys": ["f2"],
+		"command": "lsp_symbol_rename"
+	},
+	// Go to definition (LSP)
+	{
+		"keys": ["f12"],
+		"command": "lsp_symbol_definition"
+	},
+	// Find references
+	{
+		"keys": ["shift+f12"],
+		"command": "lsp_symbol_references"
+	}
+]

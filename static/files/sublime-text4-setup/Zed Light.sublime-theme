@@ -1,0 +1,209 @@
+{
+	"extends": "Adaptive.sublime-theme",
+	"variables":
+	{
+		// Surfaces from Zed One Light
+		// editor #fafafa | panel #ebebec | chrome #dcdcdd
+		"dark_bg": "#ebebec",
+		"medium_dark_bg": "#ebebec",
+		"medium_bg": "#fafafa",
+		"light_bg": "#fafafa",
+
+		"tabset_dark_bg": "#ebebec",
+		"tabset_medium_dark_bg": "#ebebec",
+		"tabset_medium_bg": "#ebebec",
+		"tabset_light_bg": "#ebebec",
+		"tabset_dark_tint_mod": "color(#242529 a(0.06))",
+		"tabset_medium_dark_tint_mod": "color(#242529 a(0.06))",
+		"tabset_medium_tint_mod": "color(#242529 a(0.08))",
+		"tabset_light_tint_mod": "color(#242529 a(0.06))",
+
+		"file_tab_unselected_label_color": "#58585a",
+		"file_tab_selected_label_color": "#242529",
+		"file_tab_unselected_light_label_color": "#58585a",
+		"file_tab_selected_light_label_color": "#242529",
+		"file_tab_angled_unselected_label_color": "#58585a",
+		"file_tab_angled_unselected_light_label_color": "#58585a",
+		"file_tab_angled_unselected_medium_label_color": "#58585a",
+
+		"adaptive_dividers": "#c9c9ca",
+		"link_fg": "#5c78e2",
+
+		"icon_tint": "color(#242529 a(0.75))",
+		"icon_light_tint": "color(#242529 a(0.70))",
+
+		"tool_tip_bg": "#ebebec",
+		"tool_tip_fg": "#242529",
+
+		"vcs_added": "#27a657",
+		"vcs_modified": "#d3b020",
+		"vcs_deleted": "#e06c76",
+		"vcs_missing": "#e06c76",
+		"vcs_staged": "#5c78e2",
+		"vcs_unmerged": "#a48819",
+
+		// Sidebar typography — match editor face, sized for tree density
+		"font_face": "IBM Plex Mono",
+		"font_size_sm": 16,
+		"font_size": 18,
+		"font_size_lg": 18
+	},
+	"rules":
+	[
+		{
+			"class": "status_bar",
+			"layer0.tint": "#dcdcdd",
+			"layer0.opacity": 1.0
+		},
+		{
+			"class": "label_control",
+			"parents": [{"class": "status_bar"}],
+			"fg": "#58585a"
+		},
+		{
+			"class": "title_bar",
+			"fg": "#242529",
+			"bg": "#dcdcdd"
+		},
+		// Sidebar tree — same surface as editor, IBM Plex Mono like buffer
+		{
+			"class": "sidebar_container",
+			"layer0.tint": "#fafafa",
+			"layer0.opacity": 1.0
+		},
+		{
+			"class": "sidebar_heading",
+			"fg": "#58585a",
+			"font.face": "IBM Plex Mono",
+			"font.size": 14,
+			"font.bold": true
+		},
+		{
+			"class": "sidebar_tree",
+			"row_padding": [12, 6],
+			"indent": 16,
+			"indent_offset": 14
+		},
+		{
+			"class": "sidebar_label",
+			"fg": "#242529",
+			"font.face": "IBM Plex Mono",
+			"font.size": 18,
+			"font.bold": false
+		},
+		{
+			"class": "sidebar_label",
+			"parents": [{"class": "tree_row", "attributes": ["selectable", "hover"]}],
+			"fg": "#242529"
+		},
+		{
+			"class": "sidebar_label",
+			"parents": [{"class": "tree_row", "attributes": ["selected"]}],
+			"fg": "#242529"
+		},
+		{
+			"class": "sidebar_label",
+			"parents": [{"class": "tree_row", "attributes": ["expandable"]}],
+			"font.bold": false
+		},
+		{
+			"class": "tree_row",
+			"attributes": ["selectable", "hover"],
+			"layer0.tint": "#dfdfe0",
+			"layer0.opacity": 1.0
+		},
+		{
+			"class": "tree_row",
+			"attributes": ["selected"],
+			"layer0.tint": "#d0d8f0",
+			"layer0.opacity": 1.0
+		},
+		{
+			"class": "tree_row",
+			"attributes": ["selected", "hover"],
+			"layer0.tint": "#c4d0ef",
+			"layer0.opacity": 1.0
+		},
+		{
+			"class": "icon_folder",
+			"layer0.tint": "#5c78e2",
+			"layer0.opacity": 0.9
+		},
+		{
+			"class": "icon_folder_loading",
+			"layer0.tint": "#5c78e2"
+		},
+		{
+			"class": "icon_folder_dup",
+			"layer0.tint": "#5c78e2"
+		},
+		{
+			"class": "icon_file_type",
+			"layer0.opacity": 1.0,
+			"content_margin": [9, 9]
+		},
+		{
+			"class": "icon_file_type",
+			"parents": [{"class": "tree_row", "attributes": ["hover"]}],
+			"layer0.opacity": 1.0
+		},
+		{
+			"class": "icon_file_type",
+			"parents": [{"class": "tree_row", "attributes": ["selected"]}],
+			"layer0.opacity": 1.0
+		},
+		{
+			"class": "tabset_control",
+			"layer0.tint": "#ebebec",
+			"layer0.opacity": 1.0
+		},
+		{
+			"class": "tab_control",
+			"layer0.tint": "#ebebec",
+			"layer0.opacity": 1.0
+		},
+		{
+			"class": "tab_control",
+			"attributes": ["selected"],
+			"layer0.tint": "#fafafa",
+			"layer0.opacity": 1.0
+		},
+		{
+			"class": "tab_label",
+			"fg": "#58585a",
+			"font.face": "IBM Plex Mono",
+			"font.size": 15
+		},
+		{
+			"class": "tab_label",
+			"parents": [{"class": "tab_control", "attributes": ["selected"]}],
+			"fg": "#242529",
+			"font.face": "IBM Plex Mono",
+			"font.size": 15
+		},
+		{
+			"class": "panel_control",
+			"layer0.tint": "#ebebec",
+			"layer0.opacity": 1.0
+		},
+		{
+			"class": "overlay_control",
+			"layer0.tint": "#ebebec",
+			"layer0.opacity": 1.0
+		},
+		{
+			"class": "puck_control",
+			"layer0.tint": "#383a41",
+			"layer0.opacity": 0.25
+		},
+		{
+			"class": "tool_tip_control",
+			"layer0.tint": "#ebebec",
+			"layer0.opacity": 1.0
+		},
+		{
+			"class": "tool_tip_label_control",
+			"fg": "#242529"
+		}
+	]
+}

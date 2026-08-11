@@ -1,0 +1,269 @@
+{
+	"extends": "Adaptive.sublime-theme",
+	"variables":
+	{
+		// Surfaces from Zed One Dark
+		// editor #282c33 | panel/tabs #2f343e | chrome #3b414d
+		"dark_bg": "#2f343e",
+		"medium_dark_bg": "#2f343e",
+		"medium_bg": "#282c33",
+		"light_bg": "#282c33",
+
+		"tabset_dark_bg": "#2f343e",
+		"tabset_medium_dark_bg": "#2f343e",
+		"tabset_medium_bg": "#2f343e",
+		"tabset_light_bg": "#2f343e",
+		"tabset_dark_tint_mod": "color(#dce0e5 a(0.08))",
+		"tabset_medium_dark_tint_mod": "color(#dce0e5 a(0.06))",
+		"tabset_medium_tint_mod": "color(#000000 a(0.15))",
+		"tabset_light_tint_mod": "color(#000000 a(0.10))",
+
+		"file_tab_unselected_label_color": "#a9afbc",
+		"file_tab_selected_label_color": "#dce0e5",
+		"file_tab_unselected_light_label_color": "#a9afbc",
+		"file_tab_selected_light_label_color": "#dce0e5",
+		"file_tab_angled_unselected_label_color": "#a9afbc",
+		"file_tab_angled_unselected_medium_label_color": "#a9afbc",
+
+		"adaptive_dividers": "#464b57",
+		"link_fg": "#74ade8",
+
+		"icon_tint": "#dce0e5",
+		"icon_light_tint": "color(#dce0e5 a(0.75))",
+		"icon_opacity": { "target": 0.75, "speed": 4.0, "interpolation": "smoothstep" },
+		"icon_hover_opacity": { "target": 1.0, "speed": 4.0, "interpolation": "smoothstep" },
+
+		"tool_tip_bg": "#2f343e",
+		"tool_tip_fg": "#dce0e5",
+
+		"vcs_added": "#27a657",
+		"vcs_modified": "#d3b020",
+		"vcs_deleted": "#e06c76",
+		"vcs_missing": "#e06c76",
+		"vcs_staged": "#74ade8",
+		"vcs_unmerged": "#dec184",
+
+		"auto_complete_bg_dark_tint": "color(#ffffff a(0.04))",
+		"auto_complete_selected_row_dark_tint": "color(#74ade8 a(0.22))",
+		"auto_complete_text_dark_tint": "#dce0e5",
+
+		"viewport_always_visible_color": "color(#c8ccd4 a(0.18))",
+		"viewport_hide_show_color": "color(#c8ccd4 a(0.30))",
+
+		// Sidebar typography — match editor face, sized for tree density
+		"font_face": "IBM Plex Mono",
+		"font_size_sm": 16,
+		"font_size": 18,
+		"font_size_lg": 18
+	},
+	"rules":
+	[
+		// Status bar — Zed title/status chrome
+		{
+			"class": "status_bar",
+			"layer0.tint": "#3b414d",
+			"layer0.opacity": 1.0
+		},
+		{
+			"class": "label_control",
+			"parents": [{"class": "status_bar"}],
+			"fg": "#a9afbc",
+			"font.face": "IBM Plex Mono",
+			"font.size": 13,
+			"font.bold": false
+		},
+		{
+			"class": "label_control",
+			"parents": [{"class": "status_bar"}],
+			"attributes": ["button"],
+			"fg": "#dce0e5"
+		},
+		// Title bar
+		{
+			"class": "title_bar",
+			"fg": "#dce0e5",
+			"bg": "#3b414d"
+		},
+		// Sidebar tree — same surface as editor, IBM Plex Mono like buffer
+		{
+			"class": "sidebar_container",
+			"layer0.tint": "#282c33",
+			"layer0.opacity": 1.0
+		},
+		{
+			"class": "sidebar_heading",
+			"fg": "#a9afbc",
+			"font.face": "IBM Plex Mono",
+			"font.size": 14,
+			"font.bold": true
+		},
+		{
+			"class": "sidebar_tree",
+			"row_padding": [12, 6],
+			"indent": 16,
+			"indent_offset": 14,
+			"dark_content": true
+		},
+		{
+			"class": "sidebar_label",
+			"fg": "#dce0e5",
+			"font.face": "IBM Plex Mono",
+			"font.size": 18,
+			"font.bold": false
+		},
+		{
+			"class": "sidebar_label",
+			"parents": [{"class": "tree_row", "attributes": ["selectable", "hover"]}],
+			"fg": "#dce0e5"
+		},
+		{
+			"class": "sidebar_label",
+			"parents": [{"class": "tree_row", "attributes": ["selected"]}],
+			"fg": "#dce0e5"
+		},
+		{
+			"class": "sidebar_label",
+			"parents": [{"class": "tree_row", "attributes": ["expandable"]}],
+			"font.bold": false
+		},
+		{
+			"class": "tree_row",
+			"attributes": ["selectable", "hover"],
+			"layer0.tint": "#363c46",
+			"layer0.opacity": 1.0
+		},
+		{
+			"class": "tree_row",
+			"attributes": ["selected"],
+			"layer0.tint": "#3d4f66",
+			"layer0.opacity": 1.0
+		},
+		{
+			"class": "tree_row",
+			"attributes": ["selected", "hover"],
+			"layer0.tint": "#455a75",
+			"layer0.opacity": 1.0
+		},
+		{
+			"class": "icon_folder",
+			"layer0.tint": "#74ade8",
+			"layer0.opacity": 0.85
+		},
+		{
+			"class": "icon_folder_loading",
+			"layer0.tint": "#74ade8"
+		},
+		{
+			"class": "icon_folder_dup",
+			"layer0.tint": "#74ade8"
+		},
+		{
+			"class": "icon_file_type",
+			"layer0.opacity": 1.0,
+			"content_margin": [9, 9]
+		},
+		{
+			"class": "icon_file_type",
+			"parents": [{"class": "tree_row", "attributes": ["hover"]}],
+			"layer0.opacity": 1.0
+		},
+		{
+			"class": "icon_file_type",
+			"parents": [{"class": "tree_row", "attributes": ["selected"]}],
+			"layer0.opacity": 1.0
+		},
+		// Tab bar / active tab feel like Zed
+		{
+			"class": "tabset_control",
+			"layer0.tint": "#2f343e",
+			"layer0.opacity": 1.0,
+			"content_margin": [0, 0, 0, 0]
+		},
+		{
+			"class": "tab_control",
+			"layer0.tint": "#2f343e",
+			"layer0.opacity": 1.0
+		},
+		{
+			"class": "tab_control",
+			"attributes": ["selected"],
+			"layer0.tint": "#282c33",
+			"layer0.opacity": 1.0
+		},
+		{
+			"class": "tab_label",
+			"fg": "#a9afbc",
+			"font.face": "IBM Plex Mono",
+			"font.size": 15
+		},
+		{
+			"class": "tab_label",
+			"parents": [{"class": "tab_control", "attributes": ["selected"]}],
+			"fg": "#dce0e5",
+			"font.face": "IBM Plex Mono",
+			"font.size": 15
+		},
+		// Panel (find, console, terminus)
+		{
+			"class": "panel_control",
+			"layer0.tint": "#2f343e",
+			"layer0.opacity": 1.0
+		},
+		{
+			"class": "panel_grid_control",
+			"layer0.tint": "#2f343e",
+			"layer0.opacity": 1.0
+		},
+		// Quick switcher / overlay
+		{
+			"class": "overlay_control",
+			"layer0.tint": "#2f343e",
+			"layer0.opacity": 1.0
+		},
+		// Scrollbars — subtle like Zed
+		{
+			"class": "scroll_bar_control",
+			"layer0.tint": "#282c33",
+			"layer0.opacity": 1.0,
+			"blur": false
+		},
+		{
+			"class": "puck_control",
+			"layer0.tint": "#c8ccd4",
+			"layer0.opacity": 0.30
+		},
+		{
+			"class": "puck_control",
+			"attributes": ["hover"],
+			"layer0.opacity": 0.45
+		},
+		// Text inputs
+		{
+			"class": "text_line_control",
+			"layer0.tint": "#282c33",
+			"layer0.opacity": 1.0,
+			"tint_index": 0
+		},
+		// Buttons
+		{
+			"class": "button_control",
+			"layer0.tint": "#363c46",
+			"layer0.opacity": 1.0
+		},
+		{
+			"class": "button_control",
+			"attributes": ["hover"],
+			"layer0.tint": "#454a56"
+		},
+		// Tooltips
+		{
+			"class": "tool_tip_control",
+			"layer0.tint": "#2f343e",
+			"layer0.opacity": 1.0
+		},
+		{
+			"class": "tool_tip_label_control",
+			"fg": "#dce0e5"
+		}
+	]
+}

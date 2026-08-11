@@ -1,0 +1,22 @@
+{
+	// Default = node run current file
+	"cmd": ["HOME_DIR/.local/bin/node", "$file"],
+	"file_regex": "^\\s*at .+ \\((.+):([0-9]+):([0-9]+)\\)$",
+	"working_dir": "$file_path",
+	"selector": "source.js",
+	"env":
+	{
+		"PATH": "HOME_DIR/.local/share/mise/installs/go/latest/bin:HOME_DIR/.local/share/mise/installs/python/latest/bin:HOME_DIR/.local/share/mise/installs/bun/latest/bin:HOME_DIR/.local/bin:HOME_DIR/Workspace/GoDev/bin:/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
+	},
+	"variants":
+	[
+		{
+			"name": "Run",
+			"cmd": ["HOME_DIR/.local/bin/node", "$file"]
+		},
+		{
+			"name": "Run (bun)",
+			"cmd": ["HOME_DIR/.local/share/mise/installs/bun/latest/bin/bun", "run", "$file"]
+		}
+	]
+}

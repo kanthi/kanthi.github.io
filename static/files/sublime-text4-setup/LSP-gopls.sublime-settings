@@ -1,0 +1,45 @@
+{
+	// Use mise-installed gopls; GUI Sublime has no shell/mise PATH
+	"command":
+	[
+		"HOME_DIR/.local/share/mise/installs/go/latest/bin/gopls"
+	],
+	"env":
+	{
+		"PATH": "HOME_DIR/.local/share/mise/installs/go/latest/bin:HOME_DIR/Workspace/GoDev/bin:HOME_DIR/.local/bin:/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin",
+		"GOPATH": "HOME_DIR/Workspace/GoDev",
+		"GOROOT": "HOME_DIR/.local/share/mise/installs/go/latest",
+		"GO111MODULE": "on"
+	},
+	"settings":
+	{
+		// Avoid go install of gopls (fails when go not on Sublime process PATH)
+		"manageGoplsBinary": false,
+
+		"gopls.usePlaceholders": true,
+		"gopls.completeUnimported": true,
+		"gopls.staticcheck": true,
+		"gopls.gofumpt": false,
+		"gopls.analyses":
+		{
+			"unusedparams": true,
+			"shadow": true
+		},
+		"gopls.hints":
+		{
+			"assignVariableTypes": true,
+			"compositeLiteralFields": true,
+			"constantValues": true,
+			"functionTypeParameters": true,
+			"parameterNames": true,
+			"rangeVariableTypes": true
+		},
+		// go list / tools run with this env inside gopls
+		"gopls.env":
+		{
+			"PATH": "HOME_DIR/.local/share/mise/installs/go/latest/bin:HOME_DIR/Workspace/GoDev/bin:HOME_DIR/.local/bin:/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin",
+			"GOPATH": "HOME_DIR/Workspace/GoDev",
+			"GOROOT": "HOME_DIR/.local/share/mise/installs/go/latest"
+		}
+	}
+}

@@ -1,0 +1,49 @@
+{
+	// Default = go run (quick results). Menu name comes from filename: Go.sublime-build
+	// Do not put top-level "name" — Sublime passes keys to exec and rejects unknown kwargs.
+	"cmd": ["go", "run", "$file"],
+	"file_regex": "^(.+?):(\\d+):(\\d+):\\s+(.*)$",
+	"working_dir": "$file_path",
+	"selector": "source.go",
+	"env":
+	{
+		"PATH": "HOME_DIR/.local/share/mise/installs/go/latest/bin:HOME_DIR/Workspace/GoDev/bin:HOME_DIR/.local/bin:/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin",
+		"GOPATH": "HOME_DIR/Workspace/GoDev",
+		"GOROOT": "HOME_DIR/.local/share/mise/installs/go/latest"
+	},
+	"variants":
+	[
+		{
+			"name": "Run",
+			"cmd": ["go", "run", "$file"]
+		},
+		{
+			"name": "Build",
+			"cmd": ["go", "build", "-o", "$file_path/$file_base_name", "$file"]
+		},
+		{
+			"name": "Build and Run",
+			"shell_cmd": "go build -o \"$file_path/$file_base_name\" \"$file\" && \"$file_path/$file_base_name\""
+		},
+		{
+			"name": "Run Package",
+			"cmd": ["go", "run", "."],
+			"working_dir": "$file_path"
+		},
+		{
+			"name": "Test Package",
+			"cmd": ["go", "test", "-v", "."],
+			"working_dir": "$file_path"
+		},
+		{
+			"name": "Test All (module)",
+			"cmd": ["go", "test", "-v", "./..."],
+			"working_dir": "$folder"
+		},
+		{
+			"name": "Mod Tidy",
+			"cmd": ["go", "mod", "tidy"],
+			"working_dir": "$folder"
+		}
+	]
+}

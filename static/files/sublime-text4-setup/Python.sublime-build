@@ -1,0 +1,27 @@
+{
+	// Default = run current file
+	"cmd": ["HOME_DIR/.local/share/mise/installs/python/latest/bin/python3", "-u", "$file"],
+	"file_regex": "^[ ]*File \"(...*?)\", line ([0-9]*)",
+	"working_dir": "$file_path",
+	"selector": "source.python",
+	"env":
+	{
+		"PATH": "HOME_DIR/.local/share/mise/installs/go/latest/bin:HOME_DIR/.local/share/mise/installs/python/latest/bin:HOME_DIR/.local/share/mise/installs/bun/latest/bin:HOME_DIR/.local/bin:HOME_DIR/Workspace/GoDev/bin:/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
+	},
+	"variants":
+	[
+		{
+			"name": "Run",
+			"cmd": ["HOME_DIR/.local/share/mise/installs/python/latest/bin/python3", "-u", "$file"]
+		},
+		{
+			"name": "Pytest file",
+			"cmd": ["HOME_DIR/.local/share/mise/installs/python/latest/bin/python3", "-m", "pytest", "-q", "$file"]
+		},
+		{
+			"name": "Pytest package",
+			"cmd": ["HOME_DIR/.local/share/mise/installs/python/latest/bin/python3", "-m", "pytest", "-q"],
+			"working_dir": "$folder"
+		}
+	]
+}

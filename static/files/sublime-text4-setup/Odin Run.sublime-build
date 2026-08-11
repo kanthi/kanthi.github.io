@@ -1,0 +1,44 @@
+{
+	// Tools → Build System → "Odin Run"
+	// ⌘B default: odin run <file> -file
+	"cmd": ["/opt/homebrew/bin/odin", "run", "$file", "-file"],
+	"file_regex": "^(.+)\\(([0-9]+):([0-9]+)\\) (.+)$",
+	"working_dir": "$file_path",
+	"selector": "source.odin",
+	"keyfiles": ["ols.json", "odinfmt.json"],
+	"env":
+	{
+		"PATH": "/opt/homebrew/bin:HOME_DIR/.local/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin",
+		"ODIN_ROOT": "/opt/homebrew/opt/odin/libexec"
+	},
+	"variants":
+	[
+		{
+			"name": "Run File",
+			"cmd": ["/opt/homebrew/bin/odin", "run", "$file", "-file"]
+		},
+		{
+			"name": "Run Package (odin run .)",
+			"cmd": ["/opt/homebrew/bin/odin", "run", "."],
+			"working_dir": "$file_path"
+		},
+		{
+			"name": "Build File",
+			"cmd": ["/opt/homebrew/bin/odin", "build", "$file", "-file", "-out:$file_path/$file_base_name"]
+		},
+		{
+			"name": "Build Package",
+			"cmd": ["/opt/homebrew/bin/odin", "build", ".", "-out:$file_path/$file_base_name"],
+			"working_dir": "$file_path"
+		},
+		{
+			"name": "Check File",
+			"cmd": ["/opt/homebrew/bin/odin", "check", "$file", "-file"]
+		},
+		{
+			"name": "Check Package",
+			"cmd": ["/opt/homebrew/bin/odin", "check", "."],
+			"working_dir": "$file_path"
+		}
+	]
+}

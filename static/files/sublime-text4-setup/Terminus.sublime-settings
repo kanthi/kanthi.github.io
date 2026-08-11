@@ -1,0 +1,109 @@
+{
+	// Default shell: interactive login zsh (loads mise, brew, etc.)
+	"default_config":
+	{
+		"linux": "Zsh",
+		"osx": "Zsh",
+		"windows": null
+	},
+	"shell_configs":
+	[
+		{
+			"name": "Zsh",
+			"cmd": ["/bin/zsh", "-i", "-l"],
+			"env":
+			{
+				"PATH": "HOME_DIR/.local/share/mise/installs/go/latest/bin:HOME_DIR/.local/share/mise/installs/python/latest/bin:HOME_DIR/.local/share/mise/installs/bun/latest/bin:HOME_DIR/.local/share/mise/installs/node/lts/bin:HOME_DIR/.local/bin:HOME_DIR/.cargo/bin:HOME_DIR/Workspace/GoDev/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin",
+				"ODIN_ROOT": "/opt/homebrew/opt/odin/libexec",
+				"GOPATH": "HOME_DIR/Workspace/GoDev",
+				"GOROOT": "HOME_DIR/.local/share/mise/installs/go/latest",
+				"LANG": "en_US.UTF-8",
+				"TERM": "xterm-256color",
+				"COLORTERM": "truecolor"
+			},
+			"enable": true,
+			"platforms": ["osx", "linux"]
+		},
+		{
+			"name": "Zsh (no login)",
+			"cmd": ["/bin/zsh", "-i"],
+			"env":
+			{
+				"PATH": "HOME_DIR/.local/share/mise/installs/go/latest/bin:HOME_DIR/.local/share/mise/installs/python/latest/bin:HOME_DIR/.local/share/mise/installs/bun/latest/bin:HOME_DIR/.local/share/mise/installs/node/lts/bin:HOME_DIR/.local/bin:HOME_DIR/.cargo/bin:HOME_DIR/Workspace/GoDev/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin",
+				"ODIN_ROOT": "/opt/homebrew/opt/odin/libexec",
+				"GOPATH": "HOME_DIR/Workspace/GoDev",
+				"GOROOT": "HOME_DIR/.local/share/mise/installs/go/latest"
+			},
+			"enable": true,
+			"platforms": ["osx", "linux"]
+		},
+		{
+			"name": "Bash",
+			"cmd": ["/bin/bash", "-i", "-l"],
+			"env":
+			{
+				"PATH": "HOME_DIR/.local/share/mise/installs/go/latest/bin:HOME_DIR/.local/share/mise/installs/python/latest/bin:HOME_DIR/.local/share/mise/installs/bun/latest/bin:HOME_DIR/.local/share/mise/installs/node/lts/bin:HOME_DIR/.local/bin:HOME_DIR/.cargo/bin:HOME_DIR/Workspace/GoDev/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
+			},
+			"enable": true,
+			"platforms": ["osx", "linux"]
+		}
+	],
+
+	"256color": true,
+	"brighten_bold_text": true,
+	"unix_term": "xterm-256color",
+	"unix_lang": "en_US.UTF-8",
+	"scrollback_history_size": 15000,
+	"min_columns": 40,
+	"max_columns": 500,
+
+	// Match Zed / One Dark chrome
+	"theme": "user",
+	"user_theme_colors":
+	{
+		"background": "#282c33",
+		"foreground": "#dce0e5",
+		"caret": "#74ade8",
+		"block_caret": "#74ade8",
+		"selection": "#3d4f66",
+		"selection_foreground": "#dce0e5",
+		"black": "#3b414d",
+		"red": "#e06c75",
+		"green": "#98c379",
+		"brown": "#e5c07b",
+		"blue": "#61afef",
+		"magenta": "#c678dd",
+		"cyan": "#56b6c2",
+		"white": "#dce0e5",
+		"light_black": "#5d636f",
+		"light_red": "#e06c75",
+		"light_green": "#98c379",
+		"light_brown": "#e5c07b",
+		"light_blue": "#61afef",
+		"light_magenta": "#c678dd",
+		"light_cyan": "#56b6c2",
+		"light_white": "#ffffff"
+	},
+
+	// Panel defaults
+	"panel_height_scale": 0.35,
+	"show_close_button": true,
+	"show_copy_button": true,
+	"show_paste_button": true,
+
+	// Close panel when shell exits cleanly (optional — leave false for logs)
+	"close_on_exit": false,
+
+	// Natural editing keys on macOS where useful
+	"natural_keyboard": false,
+
+	// Use Nerd Font Mono so powerline / nerd icons / glyphs render fully
+	"view_settings":
+	{
+		"font_face": "CaskaydiaCove Nerd Font Mono",
+		"font_size": 14,
+		"line_padding_top": 1,
+		"line_padding_bottom": 1
+	},
+
+}

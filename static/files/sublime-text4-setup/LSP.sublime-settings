@@ -1,0 +1,59 @@
+{
+	"show_view_status": true,
+	"lsp_format_on_save": true,
+	"lsp_code_actions_on_save":
+	{
+		"source.organizeImports": true,
+		"source.fixAll": true
+	},
+	// macOS GUI apps do not inherit shell/mise PATH — set explicitly
+	"environ":
+	{
+		"PATH": "HOME_DIR/.local/share/mise/installs/go/latest/bin:HOME_DIR/.local/share/mise/installs/python/latest/bin:HOME_DIR/.local/share/mise/installs/bun/latest/bin:HOME_DIR/.local/bin:HOME_DIR/Workspace/GoDev/bin:/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin",
+		"GOPATH": "HOME_DIR/Workspace/GoDev",
+		"GOROOT": "HOME_DIR/.local/share/mise/installs/go/latest",
+		"GO111MODULE": "on",
+		"ODIN_ROOT": "/opt/homebrew/opt/odin/libexec"
+	},
+	// Odin Language Server (OLS) — https://github.com/DanielGavin/ols
+	// Video (2024) still valid; paths updated for Homebrew 2026
+	"clients":
+	{
+		"odin":
+		{
+			"command":
+			[
+				"/opt/homebrew/bin/ols"
+			],
+			"enabled": true,
+			"selector": "source.odin",
+			"env":
+			{
+				"PATH": "HOME_DIR/.local/share/mise/installs/go/latest/bin:HOME_DIR/.local/share/mise/installs/python/latest/bin:HOME_DIR/.local/share/mise/installs/bun/latest/bin:HOME_DIR/.local/bin:HOME_DIR/Workspace/GoDev/bin:/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin",
+				"ODIN_ROOT": "/opt/homebrew/opt/odin/libexec"
+			},
+			"initializationOptions":
+			{
+				"odin_command": "/opt/homebrew/bin/odin",
+				"odin_root_override": "/opt/homebrew/opt/odin/libexec",
+				"collections":
+				[
+					{ "name": "core", "path": "/opt/homebrew/opt/odin/libexec/core" },
+					{ "name": "vendor", "path": "/opt/homebrew/opt/odin/libexec/vendor" },
+					{ "name": "base", "path": "/opt/homebrew/opt/odin/libexec/base" },
+					{ "name": "shared", "path": "/opt/homebrew/opt/odin/libexec/shared" }
+				],
+				"enable_semantic_tokens": true,
+				"enable_document_symbols": true,
+				"enable_hover": true,
+				"enable_snippets": true,
+				"enable_format": true,
+				"enable_procedure_snippet": true,
+				"enable_references": true,
+				"enable_document_highlights": true,
+				"enable_completion_matching": true,
+				"enable_checker_only_saved": true
+			}
+		}
+	}
+}

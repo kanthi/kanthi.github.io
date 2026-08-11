@@ -1,0 +1,18 @@
+{
+	// Applied to every Terminus terminal view
+	// Nerd Font Mono = monospaced + full Nerd glyph coverage
+	"font_face": "CaskaydiaCove Nerd Font Mono",
+	"font_size": 14,
+	"font_options":
+	[
+		"no_liga",
+		"no_clig",
+		"no_calt"
+	],
+	"line_padding_top": 1,
+	"line_padding_bottom": 1,
+	"draw_white_space": "none",
+	"word_wrap": false,
+	"gutter": false,
+	"margin": 4
+}

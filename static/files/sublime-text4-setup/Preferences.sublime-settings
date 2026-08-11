@@ -1,0 +1,107 @@
+{
+	// look and feel — Zed UI theme + One Dark/Light schemes (system auto)
+	"theme": "auto",
+	"light_theme": "Zed Light.sublime-theme",
+	"dark_theme": "Zed Dark.sublime-theme",
+	"color_scheme": "auto",
+	"light_color_scheme": "Zed One Light.sublime-color-scheme",
+	"dark_color_scheme": "Zed One Dark.sublime-color-scheme",
+	"themed_title_bar": true,
+	"adaptive_dividers": true,
+
+	// Match sidebar + editor: same face; size aligned with sidebar_label (18)
+	"font_face": "IBM Plex Mono",
+	"font_size": 22,
+	"font_options":
+	[
+		"no_liga",
+		"no_clig",
+		"no_calt"
+	],
+	"line_padding_top": 2,
+	"line_padding_bottom": 2,
+	"hardware_acceleration": "opengl",
+	"ignored_packages":
+	[
+		"Vintage",
+	],
+
+	// coding behaviour
+	"index_files": true,
+	"auto_complete_commit_on_tab": true,
+	"tab_size": 4,
+	"translate_tabs_to_spaces": true,
+	"detect_indentation": true,
+	"trim_trailing_white_space_on_save": "not_on_caret",
+	"ensure_newline_at_eof_on_save": true,
+	"rulers": [100],
+	"draw_white_space": "selection",
+	"highlight_line": true,
+	"highlight_gutter": true,
+	"highlight_line_number": true,
+	"highlight_modified_tabs": true,
+	"show_definitions": true,
+	"show_line_endings": true,
+	"show_encoding": true,
+	"copy_with_empty_selection": false,
+	"find_selected_text": true,
+	"scroll_past_end": true,
+	"always_show_minimap_viewport": true,
+	"folder_exclude_patterns":
+	[
+		".git",
+		".DS_Store",
+		".idea",
+		".vscode",
+		".zig-cache",
+		"zig-out",
+		"node_modules",
+		"__pycache__",
+		".venv",
+		"venv",
+		".mypy_cache",
+		".ruff_cache",
+		".pytest_cache",
+		".tox",
+		".next",
+		"coverage",
+		"vendor",
+		"dist",
+		"build",
+		"target"
+	],
+	"file_exclude_patterns":
+	[
+		"*.pyc",
+		"*.pyo",
+		"*.exe",
+		"*.dll",
+		"*.so",
+		"*.dylib",
+		"*.o",
+		"*.a",
+		"*.class",
+		"*.map",
+		"*.tsbuildinfo",
+		".DS_Store",
+		"Thumbs.db"
+	],
+	"binary_file_patterns":
+	[
+		"*.pyc",
+		"*.pyo",
+		"*.exe",
+		"*.dll",
+		"*.so",
+		"*.dylib",
+		"*.png",
+		"*.jpg",
+		"*.jpeg",
+		"*.gif",
+		"*.webp",
+		"*.pdf",
+		"*.zip",
+		"*.tar",
+		"*.gz"
+	],
+}

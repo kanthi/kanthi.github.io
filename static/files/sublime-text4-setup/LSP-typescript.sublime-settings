@@ -1,0 +1,13 @@
+{
+	// Requires Package Control package: LSP-typescript
+	"env":
+	{
+		"PATH": "HOME_DIR/.local/share/mise/installs/go/latest/bin:HOME_DIR/.local/share/mise/installs/python/latest/bin:HOME_DIR/.local/share/mise/installs/bun/latest/bin:HOME_DIR/.local/bin:HOME_DIR/Workspace/GoDev/bin:/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
+	},
+	"settings":
+	{
+		"typescript.tsserver.maxTsServerMemory": 3072,
+		"javascript.inlayHints.includeInlayParameterNameHints": "all",
+		"typescript.inlayHints.includeInlayParameterNameHints": "all"
+	}
+}
