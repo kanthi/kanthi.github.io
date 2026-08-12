@@ -91,6 +91,7 @@ site = ""
 
 [languages]
 [languages.en]
+# Hugo 0.158+: label/locale (not languageName/languageCode)
 label = "English"
 locale = "en-us"
 title = "KINGsBlog"

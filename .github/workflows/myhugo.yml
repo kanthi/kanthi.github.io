@@ -31,7 +31,8 @@ jobs:
   build:
     runs-on: ubuntu-latest
     env:
-      HUGO_VERSION: 0.128.0
+      # Keep in sync with local Hugo (site was fixed for 0.158+/0.164)
+      HUGO_VERSION: 0.164.0
     steps:
       - name: Install Hugo CLI
         run: |
