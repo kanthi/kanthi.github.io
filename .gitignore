@@ -37,3 +37,4 @@ hugo.linux
 themes/.DS_Store
 content/posts/.DS_Store
 .DS_Store
+.bak/
