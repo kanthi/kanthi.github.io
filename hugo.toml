@@ -120,10 +120,10 @@ logoHomeLink = "/"
 identifier = "about"
 name = "About"
 url = "/about"
-[[languages.en.menu.main]]
-identifier = "showcase"
-name = "myNotes"
-url = "http://kanthi.in/books"
+#[[languages.en.menu.main]]
+#identifier = "showcase"
+#name = "myNotes"
+#url = "http://kanthi.in/books"
 [[languages.en.menu.main]]
 identifier = "byol"
 name = "BYOL"
